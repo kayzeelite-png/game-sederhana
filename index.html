@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Kumpulkan Coin</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #05070d;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 25px 0 10px;
+            color: #247cff;
+        }
+
+        #gameCanvas {
+            display: block;
+            margin: 20px auto 10px;
+            background: #071426;
+            border: 3px solid #247cff;
+            max-width: 95%;
+        }
+
+        #info {
+            font-size: 18px;
+            margin: 10px;
+        }
+
+        .petunjuk {
+            margin: 20px auto;
+            max-width: 700px;
+            padding: 20px;
+            background: #0b1220;
+            border-radius: 12px;
+            text-align: left;
+        }
+
+        button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            background: #247cff;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #145dcc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🎮 Game Kumpulkan Coin</h1>
+
+    <canvas id="gameCanvas" width="800" height="400"></canvas>
+
+    <div id="info">
+        Skor: <span id="score">0</span> |
+        Gunakan ← → untuk bergerak dan ↑ untuk melompat
+    </div>
+
+    <button onclick="restartGame()">Mulai / Restart</button>
+
+    <div class="petunjuk">
+        <h2>Cara Bermain</h2>
+        <ol>
+            <li>Gunakan tombol ← dan → untuk bergerak.</li>
+            <li>Gunakan tombol ↑ untuk melompat.</li>
+            <li>Kumpulkan semua coin.</li>
+            <li>Capai bendera merah untuk menang.</li>
+        </ol>
+
+        <h2>Fitur</h2>
+        <ul>
+            <li>Karakter dapat bergerak.</li>
+            <li>Karakter dapat melompat.</li>
+            <li>Ada beberapa platform.</li>
+            <li>Ada coin yang bisa dikumpulkan.</li>
+            <li>Ada bendera sebagai tujuan.</li>
+        </ul>
+    </div>
+
+    <script src="game.js"></script>
+
+</body>
+</html>
